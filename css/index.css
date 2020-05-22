@@ -4,12 +4,53 @@ body,html{
     width: 100%;
     height: 100%;
 }
+.autowidthfull{
+    width: auto;
+    height: 100%;
+}
 .full{
     width: 100%;
     height: 100%;
 }
-.borderblock{
-    border-radius: 10px;
+.leftrightmarging{
+    width: auto;
+    height: 100%;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.whiteborderblock{
+    border-radius: 4px;
     background: white;
-    box-shadow: 4px 4px 4px 4px black;
+    box-shadow: 0px 2px 2px 1px darkgray;
+}
+.borderblock{
+    border-radius: 4px;
+    box-shadow: 0px 2px 2px 1px darkgray;
+}
+.marleft20{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.padding4{
+    padding: 4px 4px;
+}
+
+.box{
+    padding: 4px 4px;
+    border: #DADADA 1px solid;
+}
+
+.bantai{
+    padding: 8px 8px;
+    border: #DADADA 1px solid;
+    color: #4A4A4A;
+    font-size: 30px;
+}
+.paidui{
+    padding: 6px 6px;
+    border: #DADADA 1px solid;
+    color: #4A4A4A;
+    font-size: 16px;
+
 }

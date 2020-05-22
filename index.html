@@ -1,31 +1,101 @@
 <!DOCTYPE html>
-<html lang="en" style="width: 100%;height: 100%">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <title>个人中心</title>
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="css/index.css">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
-<body style="width: auto;height: 100%">
-    <div style="height: 100%;width:auto;margin-left: 100px;margin-right: 100px;margin-top: 20px">
-        <div>服务剩余10天 | 续费</div>
-        <div style="width: auto;height: 100%">
-        <div  style="display: grid;grid-template-columns: 30% 70%;grid-template-rows: 100px 50% 15%;height: 100%;width: 100%;grid-row-gap: 20px;grid-column-gap: 20px;margin-top: 20px">
-            <div class="borderblock" style="background: aqua;display: grid;grid-template-columns: auto auto auto;grid-template-rows: 50% 50%;padding: 3px">
-                <img src="http://222.186.36.75:8888/records/20200521/mmexport1590031745999.jpg" width="100px" height="100px" style="grid-row: 1/3">
-                <div style="background: chocolate">王大力</div>
-                <div style="background: aliceblue">调度</div>
-                <div style="background: blue;"><img src="img/phone.png" width="10px" height="10px" style="line-height: 100%">18611111111</div>
+<body >
+<!--<div style="position:relative;background: gray;margin-left: 100px;margin-right: 100px">fdfdfd</div>-->
+<div class="leftrightmarging" style="background:white;display: grid;grid-template-rows: auto;grid-template-columns: auto;">
+    <div>
+        <div class="autowidthfull"  style="display: grid;grid-template-columns: 30% calc(70% - 20px);grid-template-rows: 30px 106px calc(100% - 30px -  10% - 106px - 3*20px - 5%) 10%;grid-row-gap: 20px;grid-column-gap: 20px;">
+            <div style="grid-column:1/3;align-self: center">
+                <div  style="display: inline;background: #FF6100;border-radius: 4px;">服务剩余10天&nbsp&nbsp|&nbsp&nbsp续费</div>
+            </div>
+            <div class="whiteborderblock" style="display: grid;grid-template-columns: 100px auto auto;grid-template-rows: 50% 50%;padding: 3px">
+                <img src="http://222.186.36.75:8888/records/20200521/mmexport1590031745999.jpg" width="100px" height="100px" style="grid-row: 1/3;border-radius: 4px">
+                <div style="background: chocolate;align-self: center;margin-left:8px;margin-right:8px;border: black 1px solid;border-radius: 2px;padding-top: 4px;padding-bottom: 4px;padding-left: 4px;font-size: 18px;color:#4A4A4A ">王大力</div>
+                <div style="background: aliceblue;align-self: center;font-size: 16px;color: #9B9B9B">调度</div>
+                <div style="background: blue;align-self: center;margin-left: 8px"><img src="img/phone.png" width="14px" height="14px" style="line-height: 100%;font-size: 14px;color: #4A4A4A">18611111111</div>
                 <div style="background: bisque"></div>
                 <div style="background: cyan"></div>
             </div>
-            <div class="borderblock" style="background: aliceblue"></div>
-            <div class="borderblock" style="background: antiquewhite"></div>
-            <div class="borderblock" style="background: blue"></div>
-            <div class="borderblock" style="background: cadetblue;grid-column: 1/3 "></div>
-        </div>
+            <div class="whiteborderblock" style="display: grid;grid-template-columns: 1fr 1fr;grid-template-rows: 1fr">
+                <div style="display: grid;grid-template-rows: 1fr 1fr;grid-template-columns: 1fr 1fr">
+                    <div style="grid-column: 1/3;color: #4A4A4A;font-size: 20px;align-self: center;margin-left: 8px">日报表统计时段</div>
+                    <div style="align-self: center;margin-left: 8px;border-radius: 4px;border: #9B9B9B 1px solid;padding: 4px 4px">
+                        <div style="font-size: 14px;color: #9B9B9B;display: inline-block">开始时间</div>
+                        <div style="font-size: 14px;color: #4A4A4A;display: inline-block;margin-left: 8px">00:00</div>
+                    </div>
+                    <div style="font-size: 14px;color: #4A4A4A;display: inline-block;align-self: center;margin-left: 16px">至次日00:00</div>
+                </div>
+                <div style="display: grid;grid-template-rows: 1fr 1fr;grid-template-columns: 1fr 1fr">
+                    <div style="grid-column: 1/3;color: #4A4A4A;font-size: 20px;align-self: center;margin-left: 8px">月报表统计时段</div>
+                    <div style="align-self: center;margin-left: 8px;border-radius: 4px;border: #9B9B9B 1px solid;padding: 4px 4px">
+                        <div style="font-size: 14px;color: #9B9B9B;display: inline-block">开始时间</div>
+                        <div style="font-size: 14px;color: #4A4A4A;display: inline-block;margin-left: 8px">00:00</div>
+                    </div>
+                    <div style="font-size: 14px;color: #4A4A4A;display: inline-block;align-self: center;margin-left: 16px">至次日00:00</div>
+                </div>
             </div>
+            <div style="position: relative;" class="whiteborderblock">
+                <div style="position: absolute;width: 100px;height: 100%;background-image: linear-gradient(#6D68EF,#123387)">
+                </div>
+                <div  style="position:absolute;height:100%;width:100%;display: grid;grid-template-columns: 100px auto;grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr 1fr" >
+                    <div style="margin-top: 20px"><div style="text-align: center">单位名称:</div></div>
+                    <div class="marleft20" style="margin-top: 20px;">上海建工材料工程长桥搅拌站多媒体产业园展示规划设计有限公司</div>
+                    <div style=""><div style="text-align: center">单位编号:</div></div>
+                    <div class="marleft20" style="">8543</div>
+                    <div style=""><div style="text-align: center" >机构代码:</div></div>
+                    <div class="marleft20 box" style="">输入组织机构代码</div>
+                    <div style=""><div style="text-align: center">营业执照:</div></div>
+                    <div class="marleft20 box" style="">111</div>
+                    <div style=""><div style="text-align: center">单位简称:</div></div>
+                    <div class="marleft20 box" style="">长桥扮站</div>
+                    <div style=""><div style="text-align: center">联系人:</div></div>
+                    <div class="marleft20 box" style="">郝长桥</div>
+                    <div style=""><div style="text-align: center">联系电话:</div></div>
+                    <div class="marleft20 box" style="">18611111111</div>
+                </div>
+            </div>
+            <div class="whiteborderblock" style="display: grid;grid-template-rows: 50px auto 30px;">
+                <div style="align-self: center">单位地址:&nbsp&nbsp
+                    <div style="display: inline-block;border-radius: 4px" class="box">上海市杨浦区国正中心-售楼处</div>
+                    &nbsp&nbsp厂区半径:&nbsp&nbsp
+                    <div class="box" style="display: inline-block;border-radius: 4px">2km</div>
+                    <div style="background: #6E7DBE;padding: 10px;border-radius: 4px;display: inline-block;float: right;margin-right: 10px">添加围栏</div>
+                </div>
+                <div style="position: relative">
+                    <img src="img/map.png" style="position:absolute;" width="100%" height="100%">
+                    <div class="box" style="border-radius: 4px;border: #9B9B9B 1px solid;position: absolute;right: 10px;top: 10px;background: white">重置位置</div>
+                </div>
+                <div style="align-self: center">经纬度:<span style="font-size: 12px;color: #9B9B9B">14.45199846515616,15.1984961465</span><div style="font-size: 14px;color: #698BE5;float: right;margin-right: 10px">提示 : 点击地图调整单位地址</div></div>
+            </div>
+            <div class="whiteborderblock" style="grid-column: 1/3;display: grid;grid-template-columns:30% calc(70% - 20px) ">
+                <div class="marleft20">
+                    <div>拌台设置</div>
+                    <div style="margin-top: 10px">
+                        <div style="display: inline-block;border: #9B9B9B 1px solid; border-radius: 4px" class="bantai">1</div>
+                        <div style="display: inline-block;border: #9B9B9B 1px solid; border-radius: 4px" class="bantai">2</div>
+                        <div style="display: inline-block;border: #9B9B9B 1px solid; border-radius: 4px" class="bantai">3</div>
+                        <div style="display: inline-block;border: #9B9B9B 1px solid; border-radius: 4px" class="bantai">+</div>
+                    </div>
+                </div>
+                <div class="marleft20">
+                    <div>排队队列设置</div>
+                    <div style="margin-top: 10px">
+                        <div style="display: inline-block;border: #9B9B9B 1px solid; border-radius: 4px" class="paidui">大车车队一</div>
+                        <div style="display: inline-block;border: #9B9B9B 1px solid; border-radius: 4px" class="paidui">车队二</div>
+                        <div style="display: inline-block;border: #9B9B9B 1px solid; border-radius: 4px" class="paidui">车队三</div>
+                        <div style="display: inline-block;border: #9B9B9B 1px solid; border-radius: 4px" class="paidui">+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
 </body>
 </html>
