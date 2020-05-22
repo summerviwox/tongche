@@ -1,0 +1,15 @@
+body,html{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+.full{
+    width: 100%;
+    height: 100%;
+}
+.borderblock{
+    border-radius: 10px;
+    background: white;
+    box-shadow: 4px 4px 4px 4px black;
+}
