@@ -22,8 +22,13 @@ window.onload = function(){
     //  app.showTest()
     var a = $('#gridcontain').css('grid-template-rows')
     var b = $('#gridcontain').css('grid-template-columns')
-    $('#gridcontain').css('grid-template-rows',a)
-    $('#gridcontain').css('grid-template-columns',b)
+    var c = '40px 120px '+a.split(' ')[2]+' auto'
+    $('#gridcontain').css('grid-template-rows',c)
+    //$('#gridcontain').css('grid-template-columns',b)
+
+    var d = $('#maina').css('grid-template-columns')
+    var e = 'auto '+d.split(' ')[1]+' auto'
+    $('#maina').css('grid-template-columns',e)
 
 
 }

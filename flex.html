@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>个人中心</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+    </style>
+</head>
+
+<div id="main" style="width: 100%;height: 99%;text-align: center">
+    <div id="contain" style="display: inline-block;width: calc(100% - 100px);background: white;height: 100%;margin: 0px 50px 0px 50px">
+        <div style="display: flex;flex-direction: column;height: 100%">
+            <div style="height: auto;display: flex">
+                <!--个人信息模块-->
+                <div class="whiteborderblock" style="flex-basis: 30%;margin: 10px;display: flex;">
+                    <img class="borderblock" src="img/head.jpg" height="100px" width="100px" style="margin: 10px;align-items: center">
+                    <div style="display: flex;flex-direction: column;flex: 1 1 100%;align-items: stretch">
+                        <div style="text-align: start;margin-top: 25px">
+                            <div style="display:inline-block;line-height: 100%;padding: 5px 20px" class="box">王大力</div>
+                            <div style="display: inline-block">调度</div>
+                        </div>
+                        <div style="text-align: start;margin-top: 20px">
+                            <img src="img/phone.png" width="14px" height="14px" >
+                            <div style="display: inline-block">17454254584</div>
+                        </div>
+                    </div>
+                </div>
+                <!--报表-->
+                <div class="whiteborderblock" style="flex-basis: 70%;margin: 10px"></div>
+            </div>
+            <div style="flex-basis: 100%;display: flex">
+                <!--单位信息-->
+                <div class="whiteborderblock" style="flex-basis: 30%;margin: 10px;position: relative">
+                    <div style="position: absolute;display: flex;width: 100%;height: 100%">
+                        <div style="width: 100px;background-image: linear-gradient(#6D68EF,#123387);display: flex;flex-direction: column">
+
+                        </div>
+                        <div>
+
+                        </div>
+                    </div>
+                    <div style="position: relative;display: flex;flex-direction: column">
+                        <div style="display: flex;margin-top: 20px">
+                            <div style="flex-basis: 100px">单位名称:</div>
+                            <div style="flex-basis: calc(100% - 120px);margin-left:10px;margin-right:10px;text-align: start">上海建工材料工程长桥搅拌站多媒体产业园展示规划设计有限公司</div>
+                        </div>
+                        <div style="display: flex;margin-top: 20px;">
+                            <div style="flex-basis: 100px">单位编号:</div>
+                            <div style="flex-basis: calc(100% - 120px);margin-left:10px;margin-right:10px;text-align: start" class="box">8543</div>
+                        </div>
+
+                        <div style="display: flex;margin-top: 20px;">
+                            <div style="flex-basis: 100px">机构代码:</div>
+                            <div style="flex-basis: calc(100% - 120px);margin-left:10px;margin-right:10px;text-align: start" class="box">输入组织机构代码</div>
+                        </div>
+                        <div style="display: flex;margin-top:20px;">
+                            <div style="flex-basis: 100px">营业执照:</div>
+                            <div style="flex-basis: 100px;margin-left:10px;margin-right:10px;text-align: start;height: 80px;width: 80px" class="box"></div>
+                        </div>
+
+                        <div style="display: flex;margin-top: 20px;">
+                            <div style="flex-basis: 100px">单位简称:</div>
+                            <div style="flex-basis: calc(100% - 120px);margin-left:10px;margin-right:10px;text-align: start" class="box">长桥扮站</div>
+                        </div>
+
+                        <div style="display: flex;margin-top: 20px;">
+                            <div style="flex-basis: 100px">联系人:</div>
+                            <div style="flex-basis: calc(100% - 120px);margin-left:10px;margin-right:10px;text-align: start" class="box">郝长桥</div>
+                        </div>
+
+                        <div style="display: flex;margin-top: 20px;margin-bottom: 20px">
+                            <div style="flex-basis: 100px">联系电话:</div>
+                            <div style="flex-basis: calc(100% - 120px);margin-left:10px;margin-right:10px;text-align: start" class="box">18611111111</div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--地图模块-->
+                <div class="whiteborderblock" style="flex-basis: 70%;margin: 10px"></div>
+            </div>
+            <div class="whiteborderblock" style="height: auto;display: flex;flex-direction: row;margin: 10px 10px">
+                <!--拌台设置-->
+                <div style="display: flex;flex-direction: column;flex: 1 0 30%;">
+                    <div style="text-align: start">拌台设置</div>
+                    <div style="text-align: start">
+                        <div style="display: inline-block">1</div>
+                        <div style="display: inline-block">1</div>
+                        <div style="display: inline-block">1</div>
+                        <div style="display: inline-block">1</div>
+                        <div style="display: inline-block">1</div>
+                    </div>
+                </div>
+                <!--排队设置-->
+                <div style="display: flex;flex-direction: column;flex: 1 0 70%;margin-left: 20px">
+                    <div style="text-align: start">拌台设置</div>
+                    <div style="text-align: start">
+                        <div style="display: inline-block" v-for="car in cars">{{car}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var vue = new Vue({
+        el:'#main',
+        data: {
+            cars:[1,2,3,4,5,6,7,8,9],
+        },
+        create:function () {
+
+        }
+    })
+
+    window.onload = function () {
+        var mainwidth = $('#contain').css('width')
+        $('#contain').css('width',mainwidth)
+    }
+</script>
+<body>
+</body>
+</html>
